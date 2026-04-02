@@ -1,0 +1,146 @@
+/* --- Cấu trúc chung (Layout) --- */
+.body-customer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  overflow: hidden; /* Quan trọng để bao lấy các phần tử float */
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+  text-align: right;
+}
+
+.float-clear {
+  clear: both;
+}
+
+.align-center {
+  text-align: center;
+}
+
+/* --- Menu & Search --- */
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.menu {
+  display: inline;
+  margin-right: 15px;
+}
+
+li.menu a {
+  text-decoration: none;
+  color: blue;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* --- Danh sách sản phẩm (Home/Product List) --- */
+.inline {
+  display: inline-block; /* Giúp các sản phẩm nằm cạnh nhau */
+  margin: 10px;
+  vertical-align: top;
+}
+
+figure {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+figure img {
+  width: 300px;  /* Kích thước chuẩn trong Lab 5, 7 */
+  height: 300px;
+  object-fit: contain;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* --- Bảng dữ liệu (My Cart/My Orders) --- */
+.datatable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.datatable th {
+  background-color: #f2f2f2;
+  padding: 8px;
+}
+
+.datatable td {
+  padding: 8px;
+  text-align: center;
+}
+
+.link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* Container chứa cả Ảnh và Bảng */
+.caption-right {
+  display: flex !important;   /* Ép buộc dàn hàng ngang */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;                  /* Khoảng cách giữa ảnh và chữ */
+  margin-top: 20px;
+}
+
+/* Định dạng bảng thông tin */
+.caption-right table td {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Nút bấm ADD TO CART */
+.input-button {
+  cursor: pointer;
+  padding: 8px 15px;
+  background-color: #eee;
+  border: 1px solid #999;
+  font-weight: bold;
+}
+
+/* Container chứa toàn bộ sản phẩm */
+.align-center {
+  text-align: center;
+}
+
+/* Từng khối sản phẩm */
+.inline {
+  display: inline-block !important; /* Ép buộc nằm cùng 1 hàng */
+  width: 320px !important;         /* Giới hạn độ rộng mỗi khối */
+  margin: 10px !important;         /* Khoảng cách giữa các SP */
+  vertical-align: top;
+}
+
+/* Hình ảnh bên trong Trang chủ */
+.inline figure img {
+  width: 250px !important;         /* Thu nhỏ ảnh lại còn 250px */
+  height: 250px !important;        /* Chiều cao tương ứng */
+  object-fit: contain;             /* Giữ nguyên tỉ lệ ảnh */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tiêu đề sản phẩm */
+.inline figcaption div {
+  margin-top: 5px;
+  font-size: 16px;
+}

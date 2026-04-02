@@ -1,0 +1,20 @@
+/* Thay vì dùng table border=1, hãy dùng style này */
+.datatable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.datatable th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+}
+.datatable td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.datatable tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
