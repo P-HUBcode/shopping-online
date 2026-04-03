@@ -36,4 +36,16 @@ app.use((err, req, res, next) => {
       message: "Internal server error",
       error: err.message,
     });
+  const path = require('path'); // [cite: 32, 110]
+
+// Cấu hình cho Admin [cite: 33, 110]
+app.use('/admin', express.static(path.resolve(__dirname, '..', 'client-admin', 'build'))); // [cite: 34, 110]
+app.get('/admin/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'client-admin', 'build', 'index.html')); // 
+});
+
+// Cấu hình cho Customer [cite: 40, 110]
+app.use('/', express.static(path.resolve(__dirname, '..', 'client-customer', 'build'))); // [cite: 41, 110]
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'client-customer', 'build', 'index.html')); // 
 });
