@@ -40,7 +40,7 @@ app.use(
 
 app.get("/admin/*", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "..", "client-admin", "build", "index.html")
+    path.join(__dirname, "client-admin", "build", "index.html")
   );
 });
 
