@@ -47,7 +47,7 @@ app.get("/admin/*", (req, res) => {
 // Customer
 app.use(
   "/",
-  express.static(path.join(__dirname, "client-customer", "build"))
+  express.static(path.join(__dirname, "..", "client-customer", "build"))
 );
 
 app.get("*", (req, res) => {
