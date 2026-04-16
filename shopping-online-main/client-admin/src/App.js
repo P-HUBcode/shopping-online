@@ -3,18 +3,17 @@ import React, { Component } from 'react';
 import MyProvider from './contexts/MyProvider';
 import Login from './components/LoginComponent';
 import Main from './components/MainComponent';
-import { BrowserRouter } from 'react-router-dom'; // 1. Thêm import này
 
 class App extends Component {
   render() {
     return (
       <MyProvider>
+        {/* 🔥 để trong Router */}
         <Login />
-        <BrowserRouter> {/* 2. Bọc Main bằng BrowserRouter */}
-          <Main />
-        </BrowserRouter>
+        <Main />
       </MyProvider>
     );
   }
 }
+
 export default App;
