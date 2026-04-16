@@ -35,12 +35,12 @@ const path = require("path");
 // Admin
 app.use(
   "/admin",
-  express.static(path.join(__dirname, "client-admin", "build"))
+  express.static(path.join(__dirname, "..", "client-admin", "build"))
 );
 
 app.get("/admin/*", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "client-admin", "build", "index.html")
+    path.join(__dirname, "..", "client-admin", "build", "index.html")
   );
 });
 
