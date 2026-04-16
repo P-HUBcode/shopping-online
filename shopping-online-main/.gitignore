@@ -1,5 +1,12 @@
+# dependencies
 node_modules/
-package-lock.json
+
+# env
 .env
-.DS_Store
+
+# build
 build/
+
+# OS
+.DS_Store
+Thumbs.db
