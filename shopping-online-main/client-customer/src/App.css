@@ -1,0 +1,39 @@
+/* RESET NHẸ */
+body {
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* LINK */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BUTTON */
+button {
+  cursor: pointer;
+}
+
+/* TABLE (nếu bạn vẫn dùng ở admin) */
+.datatable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.datatable th,
+.datatable td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+/* TEXT */
+.text-center {
+  text-align: center;
+}
+
+/* OPTIONAL: smooth hover toàn site */
+img {
+  transition: transform 0.5s ease;
+}
