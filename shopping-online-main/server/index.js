@@ -29,34 +29,30 @@ app.get("/hello", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-// ✅ STATIC FRONTEND (QUAN TRỌNG)
+// ======================
+// ✅ STATIC FRONTEND
+// ======================
 const path = require("path");
 
-// Admin
-app.use(
-  "/admin",
-  express.static(path.join(__dirname, "..", "client-admin", "build"))
-);
+// 🔥 ADMIN (QUAN TRỌNG)
+const adminPath = path.join(__dirname, "..", "client-admin", "build");
+app.use("/admin", express.static(adminPath));
 
 app.get("/admin/*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "client-admin", "build", "index.html")
-  );
+  res.sendFile(path.join(adminPath, "index.html"));
 });
 
-// Customer
-app.use(
-  "/",
-  express.static(path.join(__dirname, "..", "client-customer", "build"))
-);
+// 🔥 CUSTOMER
+const customerPath = path.join(__dirname, "..", "client-customer", "build");
+app.use(express.static(customerPath));
 
 app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "client-customer", "build", "index.html")
-  );
+  res.sendFile(path.join(customerPath, "index.html"));
 });
 
-// ✅ ERROR HANDLER (đặt cuối cùng)
+// ======================
+// ERROR HANDLER
+// ======================
 app.use((err, req, res, next) => {
   console.error("Server error:", err);
   res.status(500).json({
